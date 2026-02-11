@@ -1,0 +1,122 @@
+/* Company Selector Styles */
+
+.company-selector {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background-color: #f5f5f5;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  font-size: 14px;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+:root.dark .company-selector {
+  background-color: #1e293b;
+  border-color: #475569;
+  color: #e2e8f0;
+}
+
+.selector-label {
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+  transition: color 0.3s;
+}
+
+:root.dark .selector-label {
+  color: #e2e8f0;
+}
+
+.selector-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  max-width: 250px;
+}
+
+.current-logo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.company-dropdown {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 13px;
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.3s, color 0.3s;
+}
+
+:root.dark .company-dropdown {
+  background-color: #334155;
+  border-color: #64748b;
+  color: #e2e8f0;
+}
+
+.company-dropdown:hover {
+  border-color: #999;
+}
+
+:root.dark .company-dropdown:hover {
+  border-color: #94a3b8;
+}
+
+.company-dropdown:focus {
+  outline: none;
+  border-color: #0078d4;
+  box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.1);
+}
+
+:root.dark .company-dropdown:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.company-selector.loading,
+.company-selector.error {
+  background-color: #fafafa;
+  color: #666;
+  justify-content: center;
+  padding: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+:root.dark .company-selector.loading,
+:root.dark .company-selector.error {
+  background-color: #1e293b;
+  color: #cbd5e1;
+}
+
+.company-selector.error {
+  color: #d32f2f;
+  background-color: #ffebee;
+}
+
+:root.dark .company-selector.error {
+  color: #fca5a5;
+  background-color: #7f1d1d;
+}
+
+@media (max-width: 768px) {
+  .company-selector {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .selector-wrapper {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .selector-label {
+    width: 100%;
+  }
+}
+

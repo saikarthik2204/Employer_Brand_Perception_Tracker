@@ -1,0 +1,173 @@
+/* VADER Sentiment Card Styles */
+
+.vader-sentiment-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  padding: 24px;
+  color: white;
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+:root.dark .vader-sentiment-card {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  box-shadow: 0 8px 24px rgba(79, 70, 229, 0.3);
+}
+
+.vader-sentiment-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(102, 126, 234, 0.3);
+}
+
+:root.dark .vader-sentiment-card:hover {
+  box-shadow: 0 12px 32px rgba(79, 70, 229, 0.4);
+}
+
+.vader-header {
+  margin-bottom: 20px;
+}
+
+.vader-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.vader-description {
+  margin: 4px 0 0 0;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.vader-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.sentiment-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sentiment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.label {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.95;
+}
+
+.count {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.bar-container {
+  width: 100%;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  transition: width 0.4s ease;
+}
+
+.positive-bar {
+  background: linear-gradient(90deg, #4caf50, #8bc34a);
+}
+
+.neutral-bar {
+  background: linear-gradient(90deg, #2196f3, #03a9f4);
+}
+
+.negative-bar {
+  background: linear-gradient(90deg, #f44336, #ff5722);
+}
+
+.percentage {
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.sentiment-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.summary-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+}
+
+.summary-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.8;
+}
+
+.summary-value {
+  font-size: 18px;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.sentiment-index {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.vader-info {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left: 3px solid rgba(255, 255, 255, 0.4);
+  padding: 12px 16px;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.vader-info p {
+  margin: 0;
+}
+
+.vader-info strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .vader-sentiment-card {
+    padding: 16px;
+  }
+
+  .vader-header h3 {
+    font-size: 18px;
+  }
+
+  .sentiment-summary {
+    grid-template-columns: 1fr;
+  }
+}
